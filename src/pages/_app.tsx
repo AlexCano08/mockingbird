@@ -6,6 +6,7 @@ import { Inter } from "next/font/google";
 import { api } from "~/utils/api";
 
 import "~/styles/globals.css";
+import ResponsiveAppBar from "~/components/header";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -18,6 +19,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
   return (
     <SessionProvider session={session}>
       <main className={inter.className}>
+        <ResponsiveAppBar />
         <Component {...pageProps} />
       </main>
     </SessionProvider>
