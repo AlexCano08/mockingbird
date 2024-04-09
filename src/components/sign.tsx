@@ -9,15 +9,11 @@ function SignButton() {
     if (session) {
         return (
             <Button variant="text" onClick={() => { signOut() }}>Salir</Button>
-
-
-
-
         )
     }
 
     return (
-        <Button variant="text" sx={{ alignItems: "center", color: "black" }} onClick={() => { signIn() }}>Ingresar</Button>
+        <Button id="signin" variant="text" sx={{ alignItems: "center", color: "black" }} onClick={() => { signIn() }}>Ingresar</Button>
 
     )
 }
