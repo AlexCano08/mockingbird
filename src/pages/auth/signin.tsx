@@ -8,11 +8,21 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 
+const schema = z.object({
+    email: z.string().email(),
+
+});
+
+type FormData = {
+    email: string
+}
+
 
 export default function SignIn({
     csrfToken,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
     return (
+
 
 
 
